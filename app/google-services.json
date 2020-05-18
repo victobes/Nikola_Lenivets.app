@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "172090098096",
+    "firebase_url": "https://nikola-lenivets-app.firebaseio.com",
+    "project_id": "nikola-lenivets-app",
+    "storage_bucket": "nikola-lenivets-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172090098096:android:5d9ae6f7a792cc1c74d675",
+        "android_client_info": {
+          "package_name": "com.example.nikola_lenivetsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172090098096-m33n13hb3b5opcgkut4jhtth7l9bbehr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2yTWEkdiZ25Bui3e2TM1mCxKX3LyFczQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172090098096-m33n13hb3b5opcgkut4jhtth7l9bbehr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

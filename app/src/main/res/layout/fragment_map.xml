@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/object_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Страничка Бобура -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_1"
+                android:layout_width="424dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="0"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/view1"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageButton
+                    android:id="@+id/bobur"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="236dp"
+                    android:layout_height="227dp"
+                    android:layout_marginStart="20dp"
+                    android:alpha="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+
+                    android:src="@drawable/bobur"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.154"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Страничка Белых ворот и Арки Бернаскони -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_2"
+                android:layout_width="424dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0">
+
+                <ImageView
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="0"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/view2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/white_gates"
+                    android:layout_width="275dp"
+                    android:layout_height="272dp"
+                    android:layout_marginStart="112dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/white_gates"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.679"
+                    tools:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/bernaskoni_arch"
+                    android:layout_width="198dp"
+                    android:layout_height="170dp"
+                    android:layout_marginStart="144dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bernaskoni_arch"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.226"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Страничка Ленивого зиккурата -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_3"
+                android:layout_width="424dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="0"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/view3"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/lazy_ziggurat"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="330dp"
+                    android:layout_height="329dp"
+                    android:layout_marginStart="27dp"
+                    android:alpha="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+
+                    android:src="@drawable/lazy_ziggurat"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.651"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Страничка Ротонды -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_4"
+                android:layout_width="424dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="0"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/view4"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/rotunda"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="269dp"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="40dp"
+                    android:alpha="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+
+                    android:src="@drawable/rotunda"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.173"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Страничка Вселенского Разума -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_5"
+                android:layout_width="424dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="0"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/view5"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/the_universal_mind"
+                    style="@style/Widget.AppCompat.ImageButton"
+                    android:layout_width="298dp"
+                    android:layout_height="288dp"
+                    android:layout_marginStart="25dp"
+                    android:alpha="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+
+                    android:src="@drawable/the_universal_mind"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.374"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.661"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</FrameLayout>

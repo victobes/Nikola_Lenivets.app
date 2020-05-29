@@ -7,7 +7,7 @@
     tools:showIn="@layout/fragment_bobur"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ObjectsFragments.BoburFragment">
+    tools:context=".Fragments.ObjectsFragments.BoburFragment">
 
     <TextView
         android:layout_width="wrap_content"

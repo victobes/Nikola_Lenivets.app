@@ -7,7 +7,7 @@
     tools:showIn="@layout/fragment_the_universal_mind"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ObjectsFragments.TheUniversalMindFragment">
+    tools:context=".Fragments.ObjectsFragments.TheUniversalMindFragment">
 
     <TextView
         android:layout_width="wrap_content"

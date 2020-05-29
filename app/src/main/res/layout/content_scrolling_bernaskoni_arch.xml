@@ -7,7 +7,7 @@
     tools:showIn="@layout/fragment_bernaskoni_arch"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ObjectsFragments.BernaskoniArchFragment">
+    tools:context=".Fragments.ObjectsFragments.BernaskoniArchFragment">
 
     <TextView
         android:layout_width="wrap_content"

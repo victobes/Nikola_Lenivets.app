@@ -101,7 +101,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void updateUI() {

@@ -66,6 +66,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setNavigationItemSelectedListener(this);
 
         updateNavHeader();
+
+        getSupportActionBar().setTitle(R.string.map_title);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new MapFragment()).commit();
     }
 
     public void updateNavHeader() {

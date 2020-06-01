@@ -17,107 +17,25 @@ import com.example.nikola_lenivetsapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class BoburFragment extends Fragment {
-
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class BoburFragment extends ObjectFragment {
 
 
-    private String mParam1;
-    private String mParam2;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-    private OnFragmentInteractionListener mListener;
-    private FloatingActionButton fab;
-    private MediaPlayer sound;
+        View fragmentView = inflater.inflate(R.layout.fragment_object, container, false);
 
+        objectSound = MediaPlayer.create(getActivity(), R.raw.bobur_voice);
 
-    public BoburFragment() {
+        objectPhoto = fragmentView.findViewById(R.id.object_photo);
+        objectPhoto.setImageResource(R.drawable.bobur_photo_new);
 
-    }
+        objectText = fragmentView.findViewById(R.id.object_text);
+        objectText.setText(R.string.bobur_text);
 
-
-    public static BoburFragment newInstance(String param1, String param2) {
-        BoburFragment fragment = new BoburFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-
-        OnBackPressedCallback callback = new OnBackPressedCallback(true ) {
-            @Override
-            public void handleOnBackPressed() {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new MapFragment()).commit();
-            }
-        };
-        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
-
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View fragmentView = inflater.inflate(R.layout.fragment_bobur, container, false);
-
-        sound = MediaPlayer.create(getActivity(), R.raw.bobur_voice);
-
-        fab = fragmentView.findViewById(R.id.fab);
-
+        fab = fragmentView.findViewById(R.id.object_fab);
         fab.setOnClickListener(firstFabListener);
+
         return fragmentView;
-    }
-
-
-    View.OnClickListener firstFabListener = new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            soundPlay(sound);
-            fab.setOnClickListener(secondFabListener);
-        }
-    };
-
-    View.OnClickListener secondFabListener = new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            soundStop(sound);
-            fab.setOnClickListener(firstFabListener);
-        }
-    };
-
-
-    private void soundPlay(MediaPlayer sound){
-        sound.start();
-    }
-    private void soundStop(MediaPlayer sound){
-        sound.pause();
-    }
-
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(Uri uri);
     }
 
 }

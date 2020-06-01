@@ -1,6 +1,7 @@
 package com.example.nikola_lenivetsapp.Fragments.OtherFragments;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.nikola_lenivetsapp.Fragments.ObjectsFragments.BernaskoniArchFragment;
 import com.example.nikola_lenivetsapp.Fragments.ObjectsFragments.BoburFragment;
@@ -32,10 +35,13 @@ public class MapFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     private ImageButton bobur, whiteGates, bernaskoniArch, lazyZiggurat, rotunda, theUniversalMind;
 
+    private MediaPlayer objectSound;
+    private ImageView objectPhoto;
+    private TextView textObject;
+
     public MapFragment() {
 
     }
-
 
     public static MapFragment newInstance(String param1, String param2) {
         MapFragment fragment = new MapFragment();
@@ -66,6 +72,7 @@ public class MapFragment extends Fragment {
         bobur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                getParentFragmentManager().beginTransaction().replace(R.id.container, new BoburFragment()).commit();
             }
         });

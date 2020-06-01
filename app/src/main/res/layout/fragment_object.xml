@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Fragments.ObjectsFragments.BoburFragment">
+    tools:context=".Fragments.ObjectsFragments.ObjectFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -25,6 +25,7 @@
             app:contentScrim="?attr/colorPrimary">
 
             <ImageView
+                android:id="@+id/object_photo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/bobur_photo_new"
@@ -42,10 +43,10 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_scrolling_bobur" />
+    <include layout="@layout/content_scrolling_fragment" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/object_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"

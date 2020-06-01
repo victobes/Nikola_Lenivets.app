@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/fragment_white_gates"
+    tools:showIn="@layout/fragment_object"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.ObjectsFragments.WhiteGatesFragment">
+    tools:context=".Fragments.ObjectsFragments.ObjectFragment">
 
     <TextView
+        android:id="@+id/object_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/white_gates_text" />
+        android:layout_margin="@dimen/text_margin"/>
+        <!-- android:text="@string/bobur_text" -->
 
 </androidx.core.widget.NestedScrollView>

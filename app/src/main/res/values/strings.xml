@@ -13,6 +13,7 @@
     <string name="map_title">Карта арт-объектов</string>
     <string name="profile_title">Профиль</string>
     <string name="news_title">Новости</string>
+    <string name="forum_title">Форум</string>
 
     <!-- Всплывающие сообщения -->
     <string name="toast_changes_is_saved">Изменения сохранены!</string>
@@ -21,6 +22,7 @@
     <string name="toast_registration_is_failed">Регистрация не удалась!</string>
     <string name="toast_error">Невозможно выполнить без соглашения!</string>
     <string name="toast_after_registration">Регистрация пройдена!</string>
+    <string name="toast_note_success">Запись успешно добавлена!</string>
 
     <!-- Бобур -->
     <string name="bobur_text">
@@ -99,6 +101,22 @@
     <string name="item_sign_out_name">Выйти</string>
 
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyA2yTWEkdiZ25Bui3e2TM1mCxKX3LyFczQ</string>
+
+    <!-- Подсказки -->
+    <string name="hint_email">Введите e-mail</string>
+    <string name="hint_password">Введите пароль</string>
+    <string name="hint_register_username">Имя пользователя</string>
+    <string name="hint_register_email">E-mail</string>
+    <string name="hint_register_password">Пароль</string>
+    <string name="hint_register_password2">Повторите пароль</string>
+
+    <!-- Кнопки -->
+    <string name="button_publish">Опубликовать</string>
+    <string name="button_enter">Войти</string>
+    <string name="button_register">Регистрация</string>
+    <string name="button_registration">Зарегистрироваться</string>
+    <string name="button_add">Написать</string>
+    <string name="button_change">Изменить</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

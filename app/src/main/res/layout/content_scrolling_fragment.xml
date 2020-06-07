@@ -10,10 +10,9 @@
     tools:context=".Fragments.ObjectsFragments.ObjectFragment">
 
     <TextView
-        android:id="@+id/object_text"
+        android:id="@+id/note_detail__text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"/>
-        <!-- android:text="@string/bobur_text" -->
 
 </androidx.core.widget.NestedScrollView>

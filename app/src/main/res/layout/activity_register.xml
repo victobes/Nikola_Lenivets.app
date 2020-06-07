@@ -33,7 +33,7 @@
 
     <EditText
         android:background="@drawable/edittext_style"
-        android:hint="Имя пользователя"
+        android:hint="@string/hint_register_username"
         android:id="@+id/regName"
         android:layout_width="265dp"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
 
     <EditText
         android:background="@drawable/edittext_style"
-        android:hint="E-mail"
+        android:hint="@string/hint_register_email"
         android:id="@+id/regMail"
         android:layout_width="265dp"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
 
     <EditText
         android:background="@drawable/edittext_style"
-        android:hint="Пароль"
+        android:hint="@string/hint_register_password"
         android:id="@+id/regPassword"
         android:layout_width="265dp"
         android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
 
     <EditText
         android:background="@drawable/edittext_style"
-        android:hint="Повторите пароль"
+        android:hint="@string/hint_register_password2"
         android:id="@+id/regPassword2"
         android:layout_width="265dp"
         android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_style"
-        android:text="Зарегистрироваться"
+        android:text="@string/button_registration"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

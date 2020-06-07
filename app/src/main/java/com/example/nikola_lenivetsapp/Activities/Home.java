@@ -1,5 +1,6 @@
 package com.example.nikola_lenivetsapp.Activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -7,6 +8,7 @@ import com.bumptech.glide.Glide;
 import com.example.nikola_lenivetsapp.Fragments.OtherFragments.GoogleMapFragment;
 import com.example.nikola_lenivetsapp.Fragments.OtherFragments.MapFragment;
 import com.example.nikola_lenivetsapp.Fragments.OtherFragments.NewsFragment;
+import com.example.nikola_lenivetsapp.Fragments.OtherFragments.ForumFragment;
 import com.example.nikola_lenivetsapp.Fragments.OtherFragments.ProfileFragment;
 import com.example.nikola_lenivetsapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,7 +18,6 @@ import android.view.View;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
-import androidx.navigation.ui.AppBarConfiguration;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,9 +34,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    FirebaseAuth mAuth;
-    FirebaseUser currentUser ;
+    private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
+    private FloatingActionButton fab;
 
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +50,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
+        fab.setVisibility(View.VISIBLE);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,6 +94,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -98,17 +103,25 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
             getSupportActionBar().setTitle(R.string.map_title);
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new MapFragment()).commit();
+            fab.setVisibility(View.VISIBLE);
 
         } else if (id == R.id.nav_profile) {
 
             getSupportActionBar().setTitle(R.string.profile_title);
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
+            fab.setVisibility(View.INVISIBLE);
 
         } else if (id == R.id.nav_news) {
 
             getSupportActionBar().setTitle(R.string.news_title);
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new NewsFragment()).commit();
+            fab.setVisibility(View.INVISIBLE);
 
+        } else if (id == R.id.nav_notes) {
+
+            getSupportActionBar().setTitle(R.string.forum_title);
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, new ForumFragment()).commit();
+            fab.setVisibility(View.INVISIBLE);
 
         } else if (id == R.id.nav_signout) {
 

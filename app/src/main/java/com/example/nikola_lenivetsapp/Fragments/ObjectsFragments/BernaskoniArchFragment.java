@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 
 import com.example.nikola_lenivetsapp.R;
 
+// Предоставляется информация об Арке Бернаскони
+// (звуковое сообщение, текст, изображение)
+
 public class BernaskoniArchFragment extends ObjectFragment {
 
 

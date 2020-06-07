@@ -48,6 +48,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.app.Activity.RESULT_OK;
 
+// Предоставляется возможность просмотреть список заметок пользователей приложения
+// и перейти на страницу определенной при нажатии на нее,
+// а также пользователь может создать собственную заметку.
 
 public class ForumFragment extends Fragment {
 
@@ -206,7 +209,7 @@ public class ForumFragment extends Fragment {
                                     Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
                                             "://" + getResources().getResourcePackageName(R.drawable.lenivets_hello)
                                             + '/' + getResources().getResourceTypeName(R.drawable.lenivets_hello)
-                                            + '/' + getResources().getResourceEntryName(R.drawable.lenivets_hello) );
+                                            + '/' + getResources().getResourceEntryName(R.drawable.lenivets_hello));
 
                                     Note note;
 

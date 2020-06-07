@@ -24,6 +24,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+// Профиль пользователя. Возможность изменить имя.
 
 public class ProfileFragment extends Fragment {
 

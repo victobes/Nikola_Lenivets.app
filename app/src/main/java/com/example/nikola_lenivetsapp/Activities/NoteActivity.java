@@ -11,6 +11,9 @@ import com.example.nikola_lenivetsapp.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+//Подробная информация о заметке, которая предоставляется пользователям приложения
+//(заголовок; текст,; фото, загруженное автором; аватарка и имя автора заметки)
+
 public class NoteActivity extends AppCompatActivity {
 
 

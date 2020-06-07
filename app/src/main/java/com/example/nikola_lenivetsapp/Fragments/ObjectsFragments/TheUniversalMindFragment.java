@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.example.nikola_lenivetsapp.R;
 
+// Предоставляется информация о Вселенском разуме
+// (звуковое сообщение, текст, изображение)
 
 public class TheUniversalMindFragment extends ObjectFragment {
 

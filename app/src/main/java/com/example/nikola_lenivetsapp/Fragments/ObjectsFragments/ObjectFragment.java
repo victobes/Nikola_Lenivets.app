@@ -18,6 +18,9 @@ import com.example.nikola_lenivetsapp.Fragments.OtherFragments.MapFragment;
 import com.example.nikola_lenivetsapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+// Реализуются общие для всех фрагментов арт-объектов методы
+// (обработка нажатия кнопки "назад", воспроизведение звуков)
+
 public abstract  class ObjectFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";

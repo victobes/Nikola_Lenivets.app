@@ -14,6 +14,7 @@ import android.webkit.WebView;
 
 import com.example.nikola_lenivetsapp.R;
 
+// Класс новостей парка, которые загружаются с официального сайта
 
 public class NewsFragment extends Fragment {
 
@@ -59,7 +60,7 @@ public class NewsFragment extends Fragment {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        webView.loadUrl("http://nikola-lenivets.ru");
+        webView.loadUrl(getString(R.string.web_url));
         return fragmentView;
     }
 

@@ -21,6 +21,8 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+// Адаптер заметок пользователей.
+
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.MyViewHolder> {
 
     Context mContext;
@@ -69,17 +71,17 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.MyViewHolder> 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                  Intent intent =  new Intent(mContext, NoteActivity.class);
-                  int position = getAdapterPosition();
+                    Intent intent = new Intent(mContext, NoteActivity.class);
+                    int position = getAdapterPosition();
 
-                  intent.putExtra("noteTitle", noteList.get(position).getTitle());
-                  intent.putExtra("noteImage", noteList.get(position).getPicture());
-                  intent.putExtra("noteDescription", noteList.get(position).getDescription());
-                  intent.putExtra("noteKey", noteList.get(position).getNoteKey());
-                  intent.putExtra("noteUserPhoto", noteList.get(position).getUserPhoto());
-                  intent.putExtra("noteUserName", noteList.get(position).getUserName());
+                    intent.putExtra("noteTitle", noteList.get(position).getTitle());
+                    intent.putExtra("noteImage", noteList.get(position).getPicture());
+                    intent.putExtra("noteDescription", noteList.get(position).getDescription());
+                    intent.putExtra("noteKey", noteList.get(position).getNoteKey());
+                    intent.putExtra("noteUserPhoto", noteList.get(position).getUserPhoto());
+                    intent.putExtra("noteUserName", noteList.get(position).getUserName());
 
-                  mContext.startActivity(intent);
+                    mContext.startActivity(intent);
 
                 }
             });

@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.example.nikola_lenivetsapp.R;
 
+// Предоставляется информация о Бобуре
+// (звуковое сообщение, текст, изображение)
 
 public class BoburFragment extends ObjectFragment {
 

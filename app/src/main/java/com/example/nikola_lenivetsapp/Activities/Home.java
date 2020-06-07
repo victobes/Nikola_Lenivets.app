@@ -32,6 +32,8 @@ import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+//Осуществление навигации в приложении
+
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private FirebaseAuth mAuth;
@@ -42,7 +44,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home2);
+        setContentView(R.layout.activity_home);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

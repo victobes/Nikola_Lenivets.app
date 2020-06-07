@@ -22,7 +22,8 @@ import com.example.nikola_lenivetsapp.Fragments.ObjectsFragments.TheUniversalMin
 import com.example.nikola_lenivetsapp.Fragments.ObjectsFragments.WhiteGatesFragment;
 import com.example.nikola_lenivetsapp.R;
 
-
+// Карта парка с арт-объектами,
+// возможность перейти на фрагмент каждого объекта при нажатии на кнопку-картинку.
 
 public class MapFragment extends Fragment {
 

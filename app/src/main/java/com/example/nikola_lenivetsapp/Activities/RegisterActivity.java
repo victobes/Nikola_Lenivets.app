@@ -30,6 +30,10 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+
+//Регистрация пользователя(имя пользователя, адрес эл.почты, пароль, аватарка - по желанию)
+//Используется Firebase Authentication и Storage
+
 public class RegisterActivity extends AppCompatActivity {
 
 

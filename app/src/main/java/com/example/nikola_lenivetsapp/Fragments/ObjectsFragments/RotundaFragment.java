@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.example.nikola_lenivetsapp.R;
 
+// Предоставляется информация о Ротонде
+// (звуковое сообщение, текст, изображение)
 
 public class RotundaFragment extends ObjectFragment {
 

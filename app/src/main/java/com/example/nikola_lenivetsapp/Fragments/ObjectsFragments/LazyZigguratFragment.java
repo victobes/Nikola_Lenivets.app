@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 
 import com.example.nikola_lenivetsapp.R;
 
+// Предоставляется информация о Ленивом зиккурате
+// (звуковое сообщение, текст, изображение)
+
 public class LazyZigguratFragment extends ObjectFragment {
 
 

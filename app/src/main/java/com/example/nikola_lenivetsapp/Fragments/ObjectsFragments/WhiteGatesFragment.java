@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 
 import com.example.nikola_lenivetsapp.R;
 
+// Предоставляется информация о Белых воротах
+// (звуковое сообщение, текст, изображение)
+
 public class WhiteGatesFragment extends ObjectFragment {
 
 

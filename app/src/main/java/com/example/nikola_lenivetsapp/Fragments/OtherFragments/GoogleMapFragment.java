@@ -31,6 +31,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.Locale;
 
+// Предоставляется информации о расположении арт-объектов на Google Maps.
+// Объекты, про которые содержится информация в приложении, отмечены маркерами  и соединены между собой.
+// Координаты хранятся в Cloud Firestore.
+
 public class GoogleMapFragment extends Fragment implements OnMapReadyCallback {
 
     private static final String ARG_PARAM1 = "param1";
@@ -53,7 +57,7 @@ public class GoogleMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        OnBackPressedCallback callback = new OnBackPressedCallback(true ) {
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new MapFragment()).commit();
@@ -66,15 +70,15 @@ public class GoogleMapFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         fragmentView = inflater.inflate(R.layout.fragment_google_map, container, false);
-        return  fragmentView;
+        return fragmentView;
     }
 
     @Override
-    public void onViewCreated(View view,Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         mapView = fragmentView.findViewById(R.id.mapView);
-        if (mapView != null){
+        if (mapView != null) {
             mapView.onCreate(null);
             mapView.onResume();
             mapView.getMapAsync(this);
@@ -108,7 +112,7 @@ public class GoogleMapFragment extends Fragment implements OnMapReadyCallback {
 
                                 MapMarker marker = document.toObject(MapMarker.class);
 
-                                if (marker.getTitle().equals("nikola_lenivets")){
+                                if (marker.getTitle().equals(getString(R.string.marker_title))) {
                                     CameraPosition cameraPosition = CameraPosition.builder()
                                             .target(new LatLng(Double.parseDouble(marker.getV()), Double.parseDouble(marker.getV1())))
                                             .zoom(15)
@@ -123,11 +127,11 @@ public class GoogleMapFragment extends Fragment implements OnMapReadyCallback {
                                     options.add(new LatLng(Double.parseDouble(marker.getV()), Double.parseDouble(marker.getV1())));
                                     googleMap.addPolyline(options);
                                 }
-                                Log.d("kek", marker.getV() + " lol");
                             }
+
                         } else {
 
-                            Log.w("kek", "Error getting documents.", task.getException());
+                            Log.w("TAG", "Error getting documents.", task.getException());
                         }
                     }
                 });
